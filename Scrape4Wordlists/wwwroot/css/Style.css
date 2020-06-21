@@ -1,0 +1,21 @@
+﻿html {
+    height: 100%;
+}
+
+body {
+    background: url("imgs/bg.jpg") repeat top left;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    color: #fafafa;
+}
+
+#welcome {
+    margin-top: 10em;
+    text-align: center;
+}
+
+#info {
+    margin-top: 20em;
+    text-align: center;
+}
