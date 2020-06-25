@@ -13,6 +13,7 @@ namespace Scrape4Wordlists
     {
         public static void Main(string[] args)
         {
+            new Scraper().Begin();
             CreateHostBuilder(args).Build().Run();
         }
 

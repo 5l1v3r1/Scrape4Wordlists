@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Scrape4Wordlists.DB;
 
 namespace Scrape4Wordlists.Migrations
 {
     [DbContext(typeof(ScraperContext))]
-    partial class ScraperContextModelSnapshot : ModelSnapshot
+    [Migration("20200622103758_SimplifiedScrapeFailCheckToUseCountOnly")]
+    partial class SimplifiedScrapeFailCheckToUseCountOnly
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

@@ -1,0 +1,26 @@
+﻿@page
+@model Scrape4Wordlists.Pages.OutputModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Ouput</title>
+</head>
+<body>
+    <ul>
+        @for (int x = 0; x < Model.List.Count; x++)
+        {
+        <li>
+            <p>Host: @Model.List[x].Host</p>
+            <p>Uri: @Model.List[x].AbsoluteUri</p>
+            <p>Scrape Attempts: @Model.List[x].ScrapeAttempts</p>
+        </li>
+        }
+    </ul>
+</body>
+</html>

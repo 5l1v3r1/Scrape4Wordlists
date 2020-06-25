@@ -13,9 +13,8 @@ namespace Scrape4Wordlists.Models
         public string Host { get; set; }
         public string QueryParams { get; set; }
         public string FileType { get; set; }
-        public bool Scraped { get; set; }
-        public bool ScrapeFailed { get; set; }
-        public int ScrapeAttempts { get; set; }
+        public bool Scraped { get; set; } = false;
+        public int ScrapeAttempts { get; set; } = 0;
         public DateTime ScrapeDataTime { get; set; }
     }
 }

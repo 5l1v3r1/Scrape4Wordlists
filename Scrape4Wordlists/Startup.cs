@@ -16,27 +16,22 @@ namespace Scrape4Wordlists
 {
     public class Startup
     {
-
-        private IConfiguration Configuration { get; }
-
-        public Startup(IConfiguration configuration)
-        {
-            Configuration = configuration;
-        }
-
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddRazorPages();
 
 
-            IConfigurationRoot configuration = new ConfigurationBuilder().SetBasePath(Directory.GetCurrentDirectory()).AddJsonFile("dbconnection.json").Build();
+            IConfigurationRoot dbconfiguration = new ConfigurationBuilder().SetBasePath(Directory.GetCurrentDirectory()).AddJsonFile("dbconnection.json").Build();
 
             services.AddDbContext<ScraperContext>(options =>
-                    options.UseSqlServer(configuration.GetConnectionString("ScraperContext")));
+                    options.UseSqlServer(dbconfiguration.GetConnectionString("ScraperContext")));
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            //Console.WriteLine("WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW");
+            //Scraper.Instance.Begin();
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();

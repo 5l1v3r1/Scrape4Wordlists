@@ -21,15 +21,14 @@ namespace Scrape4Wordlists.Pages
 
         public void OnGet()
         {
-            //try
-            //{
-            //    ScrapedUriCount = _context.ScrapeUri.Count();
-            //}
-            //catch (Exception e)
-            //{
-            //    Console.WriteLine(e);
-            //}
-
+            try
+            {
+                ScrapedUriCount = _context.ScrapeUri.Count();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+            }
         }
     }
 }
